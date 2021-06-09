@@ -4,11 +4,9 @@
   "description": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
-  },
-  "scripts": {
+    "start": "node app.js",
     "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
-},
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
@@ -20,5 +18,8 @@
     "mongoose": "^5.12.10",
     "nanoid": "^3.1.23",
     "shortid": "^2.2.16"
-  }
+  },
+  "engines": {
+    "node": "1213.0"
+}
 }
