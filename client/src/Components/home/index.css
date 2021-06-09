@@ -1,0 +1,139 @@
+.top_wrapper{
+    display:flex;
+    width:90vw;
+    height:60vh;
+    margin:auto;
+}
+.left{
+    display:flex;
+    flex-direction: column;
+    height:40vh;
+    width:40vw;
+    align-items:center;
+    justify-content:center;
+    margin-top:3em
+}
+.inner_left{
+    display:flex;
+    flex-direction:column;
+    margin:1.2em;
+    align-items:center;
+}
+.inner_right img{
+    width:55vw;
+    height:100%
+}
+.action-button{
+    display:flex;
+    height:100%;
+    margin-top:5em;
+    width:20vw;
+    align-items:center;
+    justify-content:center;
+}
+
+h1{
+    color:rgb(10, 129, 129);
+    text-decoration: underline rgb(216, 165, 56) 2px;
+    /* border-bottom: 1px solid rgb(216, 165, 56); */
+    text-transform: uppercase;
+    font-size:2em
+}
+.para{
+    color:#999;
+    line-height:1.5em;
+    word-wrap: wrap;
+}
+.outer_layer{
+    display:flex;
+    justify-content:center;
+    flex-direction: column;
+    text-align: center;
+    margin-top:4em;
+}
+
+.inner_layer{
+    display:flex;
+    justify-content:space-evenly;
+}
+.process_pic img{
+    width:20vw;
+    height:30vh;
+}
+.process_pic h4{
+    color:#373737
+}
+.outer_box{
+    display:flex;
+    flex-direction: column;
+    margin:2em 0;
+    align-items:center;
+    width:96vw;
+    height:40vh;
+    justify-content:center;
+}
+.inner_box{
+    display:flex;
+    align-items:center;
+    width:90vw;
+    height:40vh;
+    flex-wrap: wrap;
+    justify-content:center;
+    margin-left:1.5rem
+}
+.service_box{
+    align-items:center;
+    flex-wrap: wrap;
+    justify-content:center;
+    width:21vw;
+    height:30vh;
+    flex-direction: column;
+    box-shadow: 1px 1px 10px #ccc;
+    margin:auto;
+    border-radius:5px;
+    cursor: pointer;
+}
+.service_box h3{
+    color:rgb(216, 165, 56);
+    text-align: center;
+
+}
+.service_box h6{
+    color:#999;
+    margin:1em;
+    text-align: center;
+}
+
+.active{
+    text-decoration: none;
+    color:hsl(167, 89%, 30%);
+    font-weight: bold;
+}
+
+.btn-grad , .action-btn-grad{
+    background-image: linear-gradient(to right, #02AAB0 0%, #00CDAC  51%, #02AAB0  100%)
+}
+.btn-grad, .action-btn-grad {
+   padding: 15px;
+   align-items:center;
+   justify-content:center;
+   width: 50%;
+   text-transform: uppercase;
+   transition: 0.5s;
+   background-size: 200% auto;
+   color: white;            
+   box-shadow: 0 0 20px #eee;
+   border-radius: 5px;
+   display: flex;
+ }
+
+ .action-btn-grad{
+     width:120%;
+     padding:20px
+ }
+ .btn-grad:hover,.action-btn-grad:hover {
+   background-position: right center; /* change the direction of the change here */
+   color: #fff;
+   text-decoration: none;
+   transform:scale(1.1)
+ }

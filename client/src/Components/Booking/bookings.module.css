@@ -1,0 +1,18 @@
+.container{
+    display:flex;
+    height:85.5vh;
+    width:100vw;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+    /* margin:auto */
+}
+.table{
+    display:flex;
+    height:60vh;
+    width:100%;
+    position:absolute;
+    top:10px;
+    left:0;
+    right:0;
+}
