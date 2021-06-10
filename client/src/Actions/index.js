@@ -23,12 +23,12 @@ const query = createAction(SET_QUERY);
 const signup = createAction(REGISTER);
 
 
-const URL = 'http://localhost:4000';
+// const URL = 'http://localhost:4000';
 
 // booking actions
 export function fetchBookings(user) {
     return dispatch => {
-        axios(`${URL}/bookings?user=${user}`, {
+        axios(`/bookings?user=${user}`, {
             method: 'GET',
             crossdomain: true,
             headers: authHeader()
@@ -39,7 +39,7 @@ export function fetchBookings(user) {
 export function makeBookings(data) {
     return dispatch => {
         axios( {
-            url:`${URL}/bookings`,
+            url:`/bookings`,
             method: 'POST',
             crossdomain: true,
             data,
@@ -50,7 +50,7 @@ export function makeBookings(data) {
 }
 export function deleteBookings(id) {
     return dispatch => {
-        axios(`${URL}/bookings/${id}`, {
+        axios(`/bookings/${id}`, {
             method: 'DELETE',
             crossdomain: true,
             headers: authHeader()
@@ -62,7 +62,7 @@ export function deleteBookings(id) {
 export function makeQueries(data) {
     return dispatch => {
         axios({
-            url:`${URL}/queries`, 
+            url:`/queries`, 
             method: 'POST',
             crossdomain: true,
             data
@@ -77,7 +77,7 @@ export function makeQueries(data) {
 export function fetchService(id) {
     return dispatch => {
         axios({
-            url:`${URL}/services/${id}`,
+            url:`/services/${id}`,
             method: 'GET',
             crossdomain: true,
         }).then(response =>dispatch(getService(response.data)))
@@ -87,7 +87,7 @@ export function fetchService(id) {
 export function fetchServices() {
     return dispatch => {
         axios({
-            url:`${URL}/services`,
+            url:`/services`,
             method: 'GET',
             crossdomain: true,
         }).then(response =>dispatch(getServices(response.data.data)))
@@ -99,7 +99,7 @@ export function fetchServices() {
 export function login(data){
     return dispatch => {
         axios({
-            url: `${URL}/login`,
+            url: `/login`,
             method: 'POST',
             crossdomain: true,
             data:{ email:data.email, password:data.password},
@@ -115,7 +115,7 @@ export function login(data){
 export function register(data){
     return dispatch => {
         axios({
-            url:`${URL}/register`,
+            url:`/register`,
             method: 'POST',
             crossdomain: true,
             data:{username:data.username, password:data.password, mailId:data.email,phoneNumber:data.phoneNumber
