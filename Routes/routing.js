@@ -30,5 +30,5 @@ routing.post('/queries', queryController.newQuery);
 // routing.put('/queries/:id', queryController.updateQuery);// for admin
 // routing.delete('/queries/:id', queryController.deleteQuery);// admin
 
-routing.all('*', serviceController.invalid);
+// routing.all('*', serviceController.invalid);
 module.exports = routing;
