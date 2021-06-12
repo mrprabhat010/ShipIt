@@ -3,7 +3,6 @@ import './index.css'
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { fetchServices } from '../../Actions';
-import Button from '@material-ui/core/Button';
 
 class Services extends Component {
     state = {
@@ -47,7 +46,7 @@ class Services extends Component {
 }
 
 const mapStateToProps = (state) => ({
-    data: state.data.data
+    data: state.services.data
 })
 
 const mapDispatchToProps = (dispatch) => ({

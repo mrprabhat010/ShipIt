@@ -114,6 +114,7 @@ class Query extends Component {
         this.clearForm(this.state.formdata)
 
         if (formIsValid) {
+            //use json.stringify
             let data = {
                 "emailId": dataToSubmit.email,
                 "to": dataToSubmit.to,
@@ -211,7 +212,7 @@ class Query extends Component {
     }
 }
 const mapStateToProps = (state) => ({
-    isSubmitted: state.data.isSubmitted
+    message: state.data.message
 })
 const mapDispatchToProps = (dispatch) => ({
     query: (data) => dispatch(makeQueries(data))

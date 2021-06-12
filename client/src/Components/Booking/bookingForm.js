@@ -204,7 +204,7 @@ class Booking extends Component {
         })
 
     }
-    submitForm(event){
+     submitForm(event){
         event.preventDefault();
         
         let dataToSubmit = {};
@@ -216,12 +216,14 @@ class Booking extends Component {
         }
         if(formIsValid){
             
-            let data = {senderName:this.props.user,service:this.state.service,...dataToSubmit}
+            let data = {senderName:this.props.user,
+                service:this.state.service,
+                ...dataToSubmit}
             console.log(data)
-           this.props.book(data)
-           if(this.props.data===201){
+            this.props.book(data)
+        //    if(this.props.data===201){ need to resolve this issue
             this.setState({formSuccess: true})
-           }
+        //    }
            this.clearForm(this.state.formdata)
         } else {
             this.setState({
@@ -232,7 +234,9 @@ class Booking extends Component {
     handleClose =()=>{
         this.props.close()
     }
+    
     render() {
+        console.log(this.props.data)
         return (
             <div className={classes.container}>
                 <div className={classes.inner_wrapper_1}>
