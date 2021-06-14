@@ -16,3 +16,11 @@
     left:0;
     right:0;
 }
+.nodata{
+    display:flex;
+    color:#aaa;
+    height:100%;
+    /* text-transform: uppercase; */
+    align-items:center;
+    justify-content:center;
+}

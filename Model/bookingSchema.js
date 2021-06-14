@@ -33,7 +33,7 @@ const bookings = mongoose.Schema({
         required: [true, 'Required field'],
     },
     time: {
-        type: Date,
+        type:String,
         required: [true, 'Required field']
     },
     senderCountry: {

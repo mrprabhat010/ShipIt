@@ -23,14 +23,19 @@ class Bookings extends Component {
         let data = this.state.data;
         return (
             <div className={classes.container}>
-               <div className={classes.table}><Table rows={data}/></div>
+                {data.length ? <div className={classes.table}><Table rows={data} /></div> :
+                    <div className={classes.nodata}>
+                        <h3>You have not used our services yet.</h3>
+                    </div>
+                }
+
             </div>
         );
     }
 }
 
 const mapStateToProps = (state) => ({
-    data: state.data
+    data: state.data.data
 })
 const mapDispatchToProps = (dispatch) => ({
     bookings: (user) => dispatch(fetchBookings(user))

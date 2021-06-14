@@ -24,6 +24,7 @@ function Input(props) {
         </div>
         return errorMessage
     }
+    let id =props.id
     return (
         <div>
             <TextField 
@@ -32,7 +33,7 @@ function Input(props) {
             value={props.formdata.value} 
             {...props} 
             required
-            onChange={(event)=> props.change({event,id:props.id})}
+            onChange={(event)=> props.change({event,id})}
             variant="outlined"
             InputLabelProps={{
                 shrink: true
