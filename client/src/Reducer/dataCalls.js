@@ -9,7 +9,7 @@ import {
 export function data(state = {}, action) {
     switch (action.type) {
         case FETCH_BOOKINGS:
-            return action.payload ;
+            return action.payload;
 
         case MAKE_BOOKINGS:
             return {
